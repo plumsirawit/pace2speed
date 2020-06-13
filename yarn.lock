@@ -5094,7 +5094,7 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snowpack@^2.5.0:
+snowpack@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/snowpack/-/snowpack-2.5.1.tgz#dfff1b159caee974a4b50c9d28a9c1bed1832d35"
   integrity sha512-5EJxhTBP2VzakAHGvqYpt4yHk6z9y+zzzUr5ijqBXsd4ic28U+OZ9wNNGMf76Ne6yx3s9nUaOPeq76zBJ6FHyA==
