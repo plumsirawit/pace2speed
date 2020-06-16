@@ -59,8 +59,8 @@ const DataInput = (props: any) => {
                 _placeholder={{ color: theme.colors.gray[600], fontWeight: 200 }}
                 placeholder={placeholder}
                 size="lg"
-                fontSize="5vh"
-                height="15vh"
+                fontSize="5vmin"
+                height="15vmin"
                 marginRight={0}
                 roundedRight={0}
                 value={ lastUpdated % 2 === index % 2 ? contents[index] : output[index] }
@@ -82,8 +82,8 @@ const DataInput = (props: any) => {
             />
             <InputRightAddon
                 size="lg"
-                fontSize="5vh"
-                height="15vh"
+                fontSize="5vmin"
+				height="15vmin"
             >
                 {unit}
             </InputRightAddon>
@@ -98,7 +98,7 @@ const App = ({ }: AppProps) => {
     return (
         <CenterFlex h="100vh" w="100vw" className="App" bg={theme.colors.gray[900]}>
             <CenterFlex h="100vh" w="80vmin" alignItems="stretch">
-                <Heading m="10px" color={theme.colors.red[400]} size="2xl" fontSize="5rem" textAlign="center">
+                <Heading m="10px" color={theme.colors.red[400]} size="2xl" fontSize="10vmin" textAlign="center">
                     Pace2Speed
                 </Heading>
                 <Stack isInline={true} m="10px">
