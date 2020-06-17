@@ -9,14 +9,14 @@ import Switch from './Switch';
 
 const App = () => {
 	const theme = useTheme();
-	const [selected, setSelected] = useState<string | number | undefined>();
+	const [selected, setSelected] = useState<string | number | undefined>(0);
 	return <>
-		<CenterFlex h="100vh" w="100vw" className="App" flexDirection="row" bg={theme.colors.gray[900]}>
-			<Box w="20vw">
-				<Switch choices={['Pace2Speed', 'Calculator']} defaultChoice="Pace2Speed" value={selected} onChange={val => setSelected(val)}/>
+		<CenterFlex h="100vh" w="100vw" className="App" flexDirection={["column", "column", "row"]} bg={theme.colors.gray[900]}>
+			<Box w={["80vw", "80vw", "40vw"]} ml={[null, null, "5vmin"]}>
+				<Switch choices={['Pace2Speed', 'Calculator']} value={selected} onChange={val => setSelected(val)}/>
 			</Box>
-        	<CenterFlex h="100vh" w="85vmin" alignItems="stretch">
-				{selected === 'Pace2Speed' ? <Pace2Speed /> : <Calculator />}
+        	<CenterFlex m="5vmin" h={["auto", "auto", "100vh"]} w={["85vmin", "85vmin", "60vw"]} alignItems="stretch">
+				{selected === 0 ? <Pace2Speed /> : <Calculator />}
 			</CenterFlex>
 		</CenterFlex>
 	</>;

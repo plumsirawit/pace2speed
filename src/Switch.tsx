@@ -33,11 +33,9 @@ interface SwitchProps {
 	choices: Array<string>
 	value: string | number | undefined
 	onChange: (val: string | number | undefined) => void
-	defaultChoice?: string
 }
 
 const Switch = (props: SwitchProps) => {
-	
 	const radioChildren = props.choices.map((choice, idx) => 
 	<CustomRadio
 		value={idx}
@@ -52,8 +50,7 @@ const Switch = (props: SwitchProps) => {
 		  onChange={props.onChange}
 		  display="flex"
 		  flexDirection="column"
-		  w="100%"
-		  h="100%"
+		  w="100"
 		>
 		  {radioChildren}
 		</RadioButtonGroup>
