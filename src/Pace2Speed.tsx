@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Stack, useTheme, Heading } from '@chakra-ui/core';
 import DataInput from './DataInput';
 
@@ -16,6 +16,7 @@ const Pace2Speed = ({ }: Pace2SpeedProps) => {
 	const [paceMin, setPaceMin] = useState<string>('');
 	const [paceSec, setPaceSec] = useState<string>('');
 	const [speed, setSpeed] = useState<string>('');
+	const [lastUpdated, setLastUpdated] = useState<number>(0);
 	const updateStates = (lastUpdated: number) => {
 		if((lastUpdated === 0 || lastUpdated === 2) && checkValidNumberText(paceMin) && checkValidNumberText(paceSec)){
 			const pace = Number(paceMin) + Number(paceSec)/60;
@@ -28,10 +29,11 @@ const Pace2Speed = ({ }: Pace2SpeedProps) => {
 			setPaceSec(formatNumber(Math.floor(60*(pace-whole))));
 		}
 	}
+	useEffect(() => { updateStates(lastUpdated) });
 	const withLastUpdated = (callback: (st: string) => void, index?: number) => {
 		return (content: string) => {
 			callback(content);
-			if(index) updateStates(index);
+			if(index !== undefined) setLastUpdated(index);
 		}
 	}
     return (
