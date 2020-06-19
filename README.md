@@ -1,4 +1,8 @@
-# New Project
+# Pace2Speed
+
+Easily convert pace (min/km) to speed (km/hr).
+
+This version also supports running calculator, a tool to calculate expected time upon running with a constant pace or speed over a distance.
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
