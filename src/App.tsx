@@ -15,7 +15,7 @@ const App = () => {
 			<Box w={["80vw", "80vw", "80vw", "20vw"]} ml={[null, null, null, "5vmin"]}>
 				<Switch choices={['Pace2Speed', 'Calculator']} value={selected} onChange={val => setSelected(val)}/>
 			</Box>
-        	<CenterFlex m={["0px","0px","0px","5vmin"]} h={["auto", "auto", "auto", "100vh"]} w={["90vmin", "90vmin", "90vmin", "60vw"]} alignItems="stretch">
+        	<CenterFlex m={["0px","0px","0px","3vmin"]} h={["auto", "auto", "auto", "100vh"]} w={["90vmin", "90vmin", "90vmin", "70vw"]} alignItems="stretch">
 				{selected === 0 ? <Pace2Speed /> : <Calculator />}
 			</CenterFlex>
 		</CenterFlex>

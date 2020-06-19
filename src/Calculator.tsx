@@ -41,9 +41,9 @@ const Calculator = () => {
 			Calculator
 		</Heading>
 		<CenterFlex flexDirection={["column", "column", "column", "row"]} w="100%" paddingX="30px" boxSizing="border-box">
-			<CenterFlex m="10px 10px 10px 0px">
+			<Box w={["80vw", "80vw", "80vw", "auto"]} m="10px 10px 10px 0px">
 				<Switch choices={['Pace', 'Speed']} value={selectedChoice} onChange={val => setSelectedChoice(val)} />
-			</CenterFlex>
+			</Box>
 			<CenterFlex flex="1">
 				{
 				selectedChoice === 0 ?

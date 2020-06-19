@@ -20,10 +20,11 @@ const CustomRadio = React.forwardRef((props: any, ref) => {
 		variantColor={isChecked ? "green" : "gray"}
 		aria-checked={isChecked}
 		role="radio"
-		isDisabled={isDisabled}
+        isDisabled={isDisabled}
+        _focus={{outline: "none"}}
 		{...rest}
 		size="lg"
-		marginBottom="0px"
+        marginBottom="0px"
 		{...modifier}
 	  />
 	);
